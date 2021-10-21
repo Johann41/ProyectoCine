@@ -51,6 +51,7 @@ class CompraTick extends JFrame{
     private void componentes() {
         etiquetas();
         total();
+        botones();
     }
 
     private void etiquetas() {
@@ -70,8 +71,14 @@ class CompraTick extends JFrame{
         campotexto1.setBounds(180,35,50,30);
         panel.add(campotexto1);
     }
-
-  
     
+    private void botones() {
+        JButton boton1 = new JButton("Comprar");  
+        boton1.setPreferredSize(new Dimension(120,25));
+        add(boton1);
+        
+        JButton boton2 = new JButton("Cancelar");
+        boton2.setPreferredSize(new Dimension(120,25));
+        add(boton2);
+    }
 }
-
