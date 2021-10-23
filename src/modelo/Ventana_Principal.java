@@ -42,7 +42,7 @@ public class Ventana_Principal extends JFrame{
          JButton b1;
          JButton b2;
          JButton b3;
-         JButton b4;
+         JButton b4;     
          
          //Imagenes
          ImageIcon imag1 = new ImageIcon("movie.png");
@@ -89,6 +89,9 @@ public class Ventana_Principal extends JFrame{
         
         JLabel m4 = new JLabel(new ImageIcon("movie4.jpeg"));  
         catalogo.add(m4);
+       
+        JLabel m5 = new JLabel("Hola");  
+        catalogo.add(m5);
         
     }
 }
