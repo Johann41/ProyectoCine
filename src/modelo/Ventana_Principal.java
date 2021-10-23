@@ -93,5 +93,8 @@ public class Ventana_Principal extends JFrame{
         JLabel m5 = new JLabel("Hola");  
         catalogo.add(m5);
         
+        JLabel m6 = new JLabel("Hooola");  
+        catalogo.add(m6);
+        
     }
 }
