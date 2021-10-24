@@ -90,7 +90,7 @@ public class Ventana_Principal extends JFrame{
         JLabel m4 = new JLabel(new ImageIcon("movie4.jpeg"));  
         catalogo.add(m4);
        
-        JLabel m5 = new JLabel("Hola");  
+        JLabel m5 = new JLabel("Adios");  
         catalogo.add(m5);
    
         
