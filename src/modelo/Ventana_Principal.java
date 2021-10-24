@@ -19,18 +19,18 @@ public class Ventana_Principal extends JFrame{
     private JPanel panel = new JPanel(); 
     private JPanel menu = new JPanel();
     private JPanel catalogo = new JPanel();
-
+    private JScrollPane scroll = new JScrollPane();
     
     public Ventana_Principal(){        
         super("CINEMA");      
         getContentPane().add(panel);
         
-        //Acomodo de paneles
-        panel.setLayout(new BorderLayout());
+        //Acomodo de paneles              
         menu.setLayout(new GridBagLayout());             
         catalogo.setLayout(new GridLayout(2,2));
         panel.add(menu,BorderLayout.NORTH);               
         panel.add(catalogo,BorderLayout.CENTER);
+        catalogo.add(scroll);
         componentes();
         
     }
