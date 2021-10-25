@@ -1,5 +1,6 @@
-package asientos;
+package modelo;
 
+import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -8,14 +9,18 @@ import javax.swing.JTextField;
 
 class Lugar extends JFrame{
     
-    JPanel panel  = new JPanel();
+    Ventana_Principal panelP = new Ventana_Principal();   
+    private JPanel panel  = new JPanel();
     
-    public Lugar(){
-        
-        super("Asientos");
-        panel.setLayout(null);
-        getContentPane().add(panel);
+    public Lugar(){      
+        //super("Asientos");
+        panelP.Lugares = new JPanel();
+        panel.setLayout(null);     
+        panelP.Lugares.add(panel); 
+       // add(panelP);       
+        add(panel);
         componentes();  
+        
     }
 
     private void componentes() {
