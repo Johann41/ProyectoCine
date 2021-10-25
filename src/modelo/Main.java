@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         
         Ventana_Principal ventana = new Ventana_Principal();
-        ventana.setSize(1100,500);    
+        ventana.pack();          
         ventana.setLocationRelativeTo(null);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);      
         ventana.setVisible(true);        

@@ -7,20 +7,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-class Lugar extends JFrame{
-    
-    Ventana_Principal panelP = new Ventana_Principal();   
+class Lugar extends JPanel{
+        
     private JPanel panel  = new JPanel();
     
     public Lugar(){      
-        //super("Asientos");
-        panelP.Lugares = new JPanel();
-        panel.setLayout(null);     
-        panelP.Lugares.add(panel); 
-       // add(panelP);       
-        add(panel);
-        componentes();  
-        
+        //super("Asientos");      
+        setLayout(null);     
+        componentes();             
+        add(panel);                              
+        setBounds(410,50,600,620);
+        setVisible(true);
     }
 
     private void componentes() {
