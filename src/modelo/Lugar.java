@@ -1,23 +1,28 @@
 package modelo;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-class Lugar extends JPanel{
+class Lugar extends JDialog implements ActionListener {
         
-    private JPanel panel  = new JPanel();
-    
-    public Lugar(){      
-        //super("Asientos");      
-        setLayout(null);     
+    private JPanel panel  = new JPanel(); 
+    private JButton salir = new JButton("Salir"); 
+  
+    Lugar(Ventana_Principal parent, boolean modal) {
+        super(parent,modal);
+        setLayout(new BorderLayout());
+        panel.setLayout(null);     
         componentes();             
-        add(panel);                              
-        setBounds(410,50,600,620);
-        setVisible(true);
+        add(panel,BorderLayout.CENTER);                              
+        setBounds(410,50,600,620);      
+        salir.addActionListener(this);
+        add(salir,BorderLayout.SOUTH);     
     }
 
     private void componentes() {
@@ -326,4 +331,8 @@ class Lugar extends JPanel{
         lug2.setBounds(430,5,120,25);
         panel.add(lug2);
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) { }
+     
 }

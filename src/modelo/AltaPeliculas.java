@@ -5,19 +5,20 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class AltaPeliculas extends JFrame implements ActionListener{
+public class AltaPeliculas extends JDialog implements ActionListener{
 private final JLabel eti1,eti2,eti3,eti4;
 private final JTextField txtNombrePelicula,txtHorario;
 private final JButton add;
 private final JPanel panel;
 
-public AltaPeliculas(){
-    this.setLocationRelativeTo(null);
+    AltaPeliculas(Ventana_Principal parent, boolean modal) {
+       super(parent,modal);
+       this.setLocationRelativeTo(null);
     eti1=new JLabel("ALTA DE PELÍCULAS");
     eti1.setBounds(140,10,200,20);
     
@@ -39,7 +40,7 @@ public AltaPeliculas(){
     add = new JButton("Añadir");
     add.setBounds(225,100,80,20);
     add.setBackground(Color.ORANGE);
-    add.setEnabled(true); //hola
+    add.setEnabled(true); 
     
     panel = new JPanel();
     panel.setBackground(new java.awt.Color(0, 124, 255));
@@ -56,16 +57,8 @@ public AltaPeliculas(){
     add(panel);
     setSize(400,200);
     setVisible(true);
-    
-}
-
-    
-    public static void main(String[] args) {
-        AltaPeliculas alta = new AltaPeliculas();
-        alta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-  
     @Override
     public void actionPerformed(ActionEvent e) {}
     

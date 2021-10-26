@@ -1,8 +1,11 @@
 
 package modelo;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -11,17 +14,18 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
  
-class CompraTick extends JFrame{
+class CompraTick extends JDialog implements ActionListener{
     
     JPanel panel  = new JPanel();
-    
-    public CompraTick(){
-        
-        super("Tickets");
+
+    CompraTick(Ventana_Principal parent, boolean modal) {
+        super(parent,modal);       
+        setTitle("Tickets");
         panel.setLayout(null);
         getContentPane().add(panel);
+        setLocation(500,250); //localizacion en medio
+        setSize(600,275); // tamaÃ±o de la ventana
         componentes();
-        
     }
     private void componentes(){
         etiquetas();
@@ -65,9 +69,7 @@ class CompraTick extends JFrame{
         etiqueta4.setBounds(175,100,200,20);  //primer numero sangria, 2do arriba abajo, posiicones
         panel.add(etiqueta4);
     }
-
-
-     private void campotexto(){
+    private void campotexto(){
         JTextField campotexto1 = new JTextField("$ ");
         campotexto1.setBounds(80,75,100,20);
         panel.add(campotexto1);
@@ -75,6 +77,11 @@ class CompraTick extends JFrame{
         campotexto2.setBounds(25,125,325,100);
         panel.add(campotexto2);
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        
     }
     
    

@@ -11,55 +11,37 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class Ventana_Principal extends JFrame{   // Cambio :)
+public class Ventana_Principal extends JFrame implements ActionListener{   
        
-    private JPanel menu;
-    CatalogoPeliculas panelCatalogoPeliculas;
-    //JPanel altaPeliculas;
-    //public JPanel ventaTickets;
-    Lugar panelLugares;         
+    private JPanel menu;            
     JScrollPane scrollpaneles1;
-    JScrollPane scrollpaneles2;
+    JScrollPane scrollpaneles2;    
+    JButton b1;
+    JButton b2;
+    JButton b3;
+    JButton b4;   
+    
     public Ventana_Principal(){                                     
         
-        super("CINEMA");       
+        setTitle("CINEMA");
         setLayout(new BorderLayout()); 
         menu = new JPanel(new GridLayout());
         add(menu,BorderLayout.NORTH); 
         menu();
-        //catalogoPeliculas();
-        Lugares();
-        
-                     
+        setSize(1150,600);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);      
     }
-    private void catalogoPeliculas(){                             
-        panelCatalogoPeliculas = new CatalogoPeliculas();   
-        scrollpaneles2 = new JScrollPane();        
-        add(scrollpaneles2,BorderLayout.CENTER);
-    }
-    private void Lugares(){              
-      panelLugares = new Lugar();
-      scrollpaneles1 = new JScrollPane();     
-      add(scrollpaneles1,BorderLayout.CENTER);
-    }  
-    private void definirPanelLugares(Lugar panel){
-        scrollpaneles1.setViewportView(panel);
-    }
-    private void definirPanelPeli(CatalogoPeliculas panel){
-        scrollpaneles1.setViewportView(panel);
-    }
+   
     private void menu(){
-           
-        //Botones
-         JButton b1;
-         JButton b2;
-         JButton b3;
-         JButton b4;     
-         
+                
          //Imagenes
          ImageIcon imag1 = new ImageIcon("movie.png");
          ImageIcon imag2 = new ImageIcon("tikect.png");
@@ -74,15 +56,7 @@ public class Ventana_Principal extends JFrame{   // Cambio :)
          //catalogo
          menu.add(b1);
          
-         b1.addActionListener(new ActionListener() {  //Muestra el panel cataloPeliculas
-             @Override
-             public void actionPerformed(ActionEvent event) {
-               if(event.getSource()==b1){
-                   definirPanelPeli(panelCatalogoPeliculas);
-               }        
-             }
-         });
-        
+   
          b2 = new JButton("Alta de Películas");
          b2.setBackground(new Color(236, 140, 9));
          b2.setFont(new Font("Agency FB",Font.BOLD,20)); 
@@ -91,14 +65,6 @@ public class Ventana_Principal extends JFrame{   // Cambio :)
          //movie
          menu.add(b2);
          
-          b2.addActionListener(new ActionListener() {  //Muestra el panel altaPeliculas
-             @Override
-             public void actionPerformed(ActionEvent event) {
-               if(event.getSource()==b2){
-                 panelCatalogoPeliculas.setVisible(false);
-               }    
-             }
-         });
          
          b3 = new JButton("Venta de Tikects");
          b3.setBackground(new Color(236, 140, 9));
@@ -108,14 +74,7 @@ public class Ventana_Principal extends JFrame{   // Cambio :)
          //tikets
          menu.add(b3);
          
-           b3.addActionListener(new ActionListener() {  //Muestra el panel altaPeliculas
-             @Override
-             public void actionPerformed(ActionEvent event) {
-               if(event.getSource()==b3){
-                   panelCatalogoPeliculas.setVisible(false);
-               }               
-             }
-         });
+         
          
          b4 = new JButton("Selección de Lugares"); 
          b4.setBackground(new Color(236, 140, 9));
@@ -125,16 +84,21 @@ public class Ventana_Principal extends JFrame{   // Cambio :)
          //asiento
          menu.add(b4);
          
-           b4.addActionListener(new ActionListener() {  //Muestra el panel altaPeliculas
-             @Override
-             public void actionPerformed(ActionEvent event) {
-               if(event.getSource()==b4){
-                   panelCatalogoPeliculas.setVisible(false);
-                   definirPanelLugares(panelLugares);
-               }      
-             }
-         });
+         
+         
  
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       if(e.getSource()==b1) //Catalogo          
+       new CatalogoPeliculas(this,true).setVisible(true);               
+       if(e.getSource()==b2) // AltaP
+       new AltaPeliculas(this,true).setVisible(true);     
+       if(e.getSource()==b3) //AltaT 
+       new CompraTick(this,true).setVisible(true);      
+       if(e.getSource()==b4) //Lugares           
+       new Lugar(this,true).setVisible(true);          
     }
     
 }
