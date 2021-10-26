@@ -39,7 +39,7 @@ public AltaPeliculas(){//constructor
     add = new JButton("Añadir");
     add.setBounds(225,100,80,20);
     add.setBackground(Color.ORANGE);
-    add.setEnabled(true);
+    add.setEnabled(true); //hola
     
     panel = new JPanel();
     panel.setBackground(new java.awt.Color(0, 124, 255));
