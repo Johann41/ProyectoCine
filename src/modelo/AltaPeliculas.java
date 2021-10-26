@@ -16,7 +16,7 @@ private final JTextField txtNombrePelicula,txtHorario;
 private final JButton add;
 private final JPanel panel;
 
-public AltaPeliculas(){//constructor
+public AltaPeliculas(){
     this.setLocationRelativeTo(null);
     eti1=new JLabel("ALTA DE PELÍCULAS");
     eti1.setBounds(140,10,200,20);
