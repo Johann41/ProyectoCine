@@ -39,6 +39,7 @@ public AltaPeliculas(){//constructor
     add.setBounds(225,100,80,20);
     
     panel = new JPanel();
+    panel.setBackground(new java.awt.Color(0, 124, 255));
     panel.setLayout(null);
     
     panel.add(eti1);
