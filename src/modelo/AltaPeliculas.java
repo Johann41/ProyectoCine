@@ -1,6 +1,7 @@
 
 package modelo;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -37,6 +38,8 @@ public AltaPeliculas(){//constructor
     
     add = new JButton("Añadir");
     add.setBounds(225,100,80,20);
+    add.setBackground(Color.ORANGE);
+    add.setEnabled(true);
     
     panel = new JPanel();
     panel.setBackground(new java.awt.Color(0, 124, 255));
