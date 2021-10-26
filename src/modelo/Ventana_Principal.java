@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class Ventana_Principal extends JFrame{
+public class Ventana_Principal extends JFrame{   // Cambio :)
        
     private JPanel menu;
     CatalogoPeliculas panelCatalogoPeliculas;
@@ -32,7 +32,7 @@ public class Ventana_Principal extends JFrame{
         add(menu,BorderLayout.NORTH); 
         menu();
         //catalogoPeliculas();
-        //Lugares();
+        Lugares();
         
                      
     }
