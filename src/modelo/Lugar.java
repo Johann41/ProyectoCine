@@ -11,8 +11,7 @@ import javax.swing.JTextField;
 
 class Lugar extends JDialog implements ActionListener {
         
-    private JPanel panel  = new JPanel(); 
-    private JButton salir = new JButton("Salir"); 
+    private JPanel panel  = new JPanel();     
   
     Lugar(Ventana_Principal parent, boolean modal) {
         super(parent,modal);
@@ -21,8 +20,7 @@ class Lugar extends JDialog implements ActionListener {
         componentes();             
         add(panel,BorderLayout.CENTER);                              
         setBounds(410,50,600,620);      
-        salir.addActionListener(this);
-        add(salir,BorderLayout.SOUTH);     
+             
     }
 
     private void componentes() {
