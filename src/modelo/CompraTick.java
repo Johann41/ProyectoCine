@@ -25,7 +25,7 @@ class CompraTick extends JDialog implements ActionListener{
         panel.setLayout(null);
         getContentPane().add(panel);
         setLocation(500,250); //localizacion en medio
-        setSize(600,275); // tamaÃ±o de la ventana
+        setSize(400,275); // tamaÃ±o de la ventana
         panel.setBackground(new java.awt.Color(0, 124, 255));
         componentes();
     }
