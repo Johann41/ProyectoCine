@@ -33,6 +33,7 @@ public class Ventana_Principal extends JFrame implements ActionListener{
         menu = new JPanel(new GridLayout());
         add(menu,BorderLayout.NORTH); 
         menu();
+        menu.setBackground(new java.awt.Color(0, 124, 255));
         setSize(1150,600);
         b1.addActionListener(this);
         b2.addActionListener(this);
@@ -49,7 +50,7 @@ public class Ventana_Principal extends JFrame implements ActionListener{
          ImageIcon imag4 = new ImageIcon("catalogo.png");
            
          b1 = new JButton("Catalogo de películas");     
-         b1.setBackground(new Color(236, 140, 9));
+         b1.setBackground(Color.ORANGE);
          b1.setFont(new Font("Agency FB",Font.BOLD,20)); 
          b1.setIcon(new ImageIcon(imag4.getImage().getScaledInstance
         (100, 40,Image.SCALE_SMOOTH)));         
@@ -58,7 +59,7 @@ public class Ventana_Principal extends JFrame implements ActionListener{
          
    
          b2 = new JButton("Alta de Películas");
-         b2.setBackground(new Color(236, 140, 9));
+         b2.setBackground(Color.ORANGE);
          b2.setFont(new Font("Agency FB",Font.BOLD,20)); 
          b2.setIcon(new ImageIcon(imag1.getImage().getScaledInstance
          (100, 40,Image.SCALE_SMOOTH)));
@@ -67,7 +68,7 @@ public class Ventana_Principal extends JFrame implements ActionListener{
          
          
          b3 = new JButton("Venta de Tikects");
-         b3.setBackground(new Color(236, 140, 9));
+         b3.setBackground(Color.ORANGE);
          b3.setFont(new Font("Agency FB",Font.BOLD,20)); 
          b3.setIcon(new ImageIcon(imag2.getImage().getScaledInstance
         (100, 40,Image.SCALE_SMOOTH)));
@@ -77,7 +78,7 @@ public class Ventana_Principal extends JFrame implements ActionListener{
          
          
          b4 = new JButton("Selección de Lugares"); 
-         b4.setBackground(new Color(236, 140, 9));
+         b4.setBackground(Color.ORANGE);
          b4.setFont(new Font("Agency FB",Font.BOLD,20)); 
          b4.setIcon(new ImageIcon(imag3.getImage().getScaledInstance
         (100, 40,Image.SCALE_SMOOTH)));

@@ -2,6 +2,7 @@
 package modelo;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -28,12 +29,12 @@ public class CatalogoPeliculas extends JDialog implements ActionListener{
        super(parent,modal);
        setTitle("Catalogo de Peliculas");
        panel = new JPanel();
-       panel.setLayout((new GridBagLayout()));
-   
+       panel.setLayout((new GridBagLayout()));   
        panel.setPreferredSize(new Dimension(1100,1800));     
        catalogo(); 
        scroll = new JScrollPane(panel);   
        setBounds(600,400,1100,600);
+       setBackground(new java.awt.Color(0, 124, 255));
        add(scroll);         
     }
     
@@ -56,6 +57,7 @@ public class CatalogoPeliculas extends JDialog implements ActionListener{
         m1 = new JButton(new ImageIcon());                 
         m1.setIcon(new ImageIcon(imag1.getImage().getScaledInstance               
         (500, 900,Image.SCALE_SMOOTH)));      
+        m1.setBackground(Color.ORANGE);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 0;
@@ -63,14 +65,16 @@ public class CatalogoPeliculas extends JDialog implements ActionListener{
         
         m2 = new JButton(new ImageIcon());  
         m2.setIcon(new ImageIcon(imag2.getImage().getScaledInstance
-        (500, 900,Image.SCALE_SMOOTH)));       
+        (500, 900,Image.SCALE_SMOOTH)));   
+        m2.setBackground(Color.ORANGE);
         c.gridx = 0;
         c.gridy = 1;
         panel.add(m2,c);     
         
         m3 = new JButton(new ImageIcon());  
         m3.setIcon(new ImageIcon(imag3.getImage().getScaledInstance
-        (500, 900,Image.SCALE_SMOOTH)));              
+        (500, 900,Image.SCALE_SMOOTH)));    
+        m3.setBackground(Color.ORANGE);
         c.gridx = 1;
         c.gridy = 0;
         panel.add(m3,c);     
@@ -78,6 +82,7 @@ public class CatalogoPeliculas extends JDialog implements ActionListener{
         m4 = new JButton(new ImageIcon());  
         m4.setIcon(new ImageIcon(imag4.getImage().getScaledInstance
         (500, 900,Image.SCALE_SMOOTH)));       
+        m4.setBackground(Color.ORANGE);
         c.gridx = 1;
         c.gridy = 1;
         panel.add(m4,c);     

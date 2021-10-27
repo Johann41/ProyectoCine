@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class AltaPeliculas extends JDialog implements ActionListener{
-private final JLabel eti1,eti2,eti3,eti4;
+private final JLabel eti2,eti3,eti4;
 private final JTextField txtNombrePelicula,txtHorario;
 private final JButton add;
 private final JPanel panel;
@@ -19,8 +19,6 @@ private final JPanel panel;
     AltaPeliculas(Ventana_Principal parent, boolean modal) {
        super(parent,modal);
        this.setLocationRelativeTo(null);
-    eti1=new JLabel("ALTA DE PELÍCULAS");
-    eti1.setBounds(140,10,200,20);
     
     eti2=new JLabel("Nombre de Película: ");
     eti2.setBounds(40,60,180,20);
@@ -46,7 +44,6 @@ private final JPanel panel;
     panel.setBackground(new java.awt.Color(0, 124, 255));
     panel.setLayout(null);
     
-    panel.add(eti1);
     panel.add(eti2);
     panel.add(eti3);
     panel.add(eti4);
@@ -56,7 +53,7 @@ private final JPanel panel;
     
     add(panel);
     setSize(400,200);
-    setVisible(true);
+    
     }
 
     @Override

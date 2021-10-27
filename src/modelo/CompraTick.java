@@ -1,5 +1,6 @@
 
 package modelo;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -25,6 +26,7 @@ class CompraTick extends JDialog implements ActionListener{
         getContentPane().add(panel);
         setLocation(500,250); //localizacion en medio
         setSize(600,275); // tamaÃ±o de la ventana
+        panel.setBackground(new java.awt.Color(0, 124, 255));
         componentes();
     }
     private void componentes(){
@@ -36,10 +38,12 @@ class CompraTick extends JDialog implements ActionListener{
     private void botones(){
         JButton boton1 = new JButton("Comprar");     
         boton1.setBounds(255,10,100,25);
+        boton1.setBackground(Color.ORANGE);
         panel.add(boton1);
         
         JButton boton2 = new JButton("Cancelar"); 
          boton2.setBounds(255,45,100,25);
+         boton2.setBackground(Color.ORANGE);
         panel.add(boton2);
     }
     private void jcomobox(){       

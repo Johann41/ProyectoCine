@@ -17,7 +17,8 @@ class Lugar extends JDialog implements ActionListener {
         super(parent,modal);
         setLayout(new BorderLayout());
         setTitle("Seleccion de Lugares");
-        panel.setLayout(null);     
+        panel.setLayout(null);   
+        panel.setBackground(new java.awt.Color(0, 124, 255));
         componentes();             
         add(panel,BorderLayout.CENTER);                              
         setBounds(410,50,600,650);      
