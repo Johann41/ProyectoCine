@@ -11,6 +11,6 @@ public class Main {
         ventana.setLocationRelativeTo(null);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);      
         ventana.setVisible(true);        
-        //cambio
+        
     }
 }
