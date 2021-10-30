@@ -19,12 +19,12 @@ import javax.swing.JScrollPane;
 public class Ventana_Principal extends JFrame implements ActionListener{   
        
     private JPanel menu;            
-    JScrollPane scrollpaneles1;
-    JScrollPane scrollpaneles2;    
-    JButton b1;
-    JButton b2;
-    JButton b3;
-    JButton b4;   
+    private JScrollPane scrollpaneles1;
+    private JScrollPane scrollpaneles2;    
+    private JButton b1;
+    private JButton b2;
+    private JButton b3;
+    private JButton b4;   
     
     public Ventana_Principal(){                                     
         
